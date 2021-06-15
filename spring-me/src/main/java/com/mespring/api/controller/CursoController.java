@@ -34,14 +34,14 @@ public class CursoController {
 		
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("/cursos")
 	public void UpdateCurso(@PathVariable Curso curso) {
 		 cursoRepository.save(curso);
 	}  
 	
 	@DeleteMapping("/{id}")
 	public void DeleteCurso(@PathVariable Curso curso) {
-		 cursoRepository.delete(curso);
+		 cursoRepository.deleteById(id);
 	}  
 
 }
